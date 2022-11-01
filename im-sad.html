@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Exam in</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <section class="hero is-danger is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered content is-large">
+        <h1 class="title is-1" id="timer">
+          Loading...
+        </h1>
+        <p class="subtitle is-3" id="text">
+          Exams are coming 💀
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    navigator.serviceWorker &&
+navigator.serviceWorker.register('SW.js').then(function (registration)
+{
+});
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 17, 2023 12:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="timer"
+      document.getElementById("timer").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        window.location="/hindi"
+      }
+    }, 1000);
+    var y = setInterval(function (){
+      var quotes=['i have no friends',"i might have 'friends' but no friends",'Im lonelyyy broken and saddddddd','the reason i can do so much shit is that i am lonely',"I wish i could talk to someone that i could trust","Wish you never ever knew my name","I am sorry for even talking to anyone","All i do is just waste people's time","Still, I can't escape","The one person who i thought was trustable broke me into pieces","It went on way too long","I tried and I tried","And I'm so done with the mess you left embedded in lead","I got nobody on my side, I'm a psycho","I'm a boy with a knife, woah","Even if I wish I'd die, I'm alright bro","Thoughts stay inside my mind with a light code"];
+      document.getElementById("text").innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+    },10000);
+  </script>
+</body>
+
+</html>
