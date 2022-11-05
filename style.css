@@ -2,5 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 html{
     overflow: hidden;
-    font-family: 'Dosis', sans-serif;
+    
+}
+*{
+    font-family: 'Dosis', sans-serif,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
