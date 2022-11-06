@@ -8,8 +8,7 @@ const filesToCache = [
   '/AI',
   '/science',
   '/English',
-  '/style.css',
-  '/im-sad'
+  '/style.css'
 ];
 
 // the event handler for the activate event
